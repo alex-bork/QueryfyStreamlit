@@ -1,3 +1,4 @@
 - Check excel files for sheet to use
-- Implement CSV support
-- Implement multiple files support
+- ~~Implement CSV support~~
+- ~~Implement multiple files support~~
+- Implement DB Updates and File Download

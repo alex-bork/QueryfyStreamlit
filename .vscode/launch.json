@@ -8,7 +8,7 @@
             "name": "Python-Debugger: Aktuelle Datei mit Argumenten",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/venv/bin/streamlit",
+            "program": "${workspaceFolder}/venv/Scripts/streamlit.exe",
             "args": "run app.py"
         }
     ]
