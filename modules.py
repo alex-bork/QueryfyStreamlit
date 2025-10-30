@@ -39,7 +39,10 @@ class ExcelDataExtractor(FileDataExtractorBase):
         self._sheetname = sheetname
 
     def create_dataframe(self):
-        df = pd.read_excel(self._file_binary, sheet_name=self._sheetname)
+        if self._sheetname:
+            df = pd.read_excel(self._file_binary, sheet_name=self._sheetname)
+        else:
+            df = pd.read_excel(self._file_binary)
         return df
 
 

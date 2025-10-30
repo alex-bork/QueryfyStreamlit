@@ -46,9 +46,9 @@ def get_multiple_sheets_files() -> Dict[str, list]:
     files_with_sheets = {}
     for file in excel_files:
         xls = pd.ExcelFile(file.data)
-        if len(xls.sheet_names) > 1:
-            files_with_sheets[file.name] = xls.sheet_names
-            files_with_sheets[file.name].sort()
+        # if len(xls.sheet_names) > 1:
+        files_with_sheets[file.name] = xls.sheet_names
+        files_with_sheets[file.name].sort()
     return files_with_sheets
 
 
@@ -187,7 +187,7 @@ with st.sidebar:
     files = st.file_uploader("File upload", 
                      accept_multiple_files=True,
                      key="file_uploader",
-                     type=["xlsx", "xls", "csv"])
+                     type=["xlsx", "xls"])
     with st.container(horizontal=True, horizontal_alignment="left"):
         if st.button("Register file", 
                     type="primary",
